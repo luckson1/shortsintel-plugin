@@ -1,7 +1,7 @@
 {
   "$schema": "https://agent-plugins.org/schemas/1.0.0/plugin.schema.json",
   "name": "shortsintel",
-  "version": "1.0.0",
+  "version": "1.0.1",
   "description": "Short-form video and ad intelligence for TikTok, Instagram Reels, YouTube Shorts and Facebook: research what works in a niche, track creators, hashtags, sounds and advertisers, and search the Meta and TikTok ad libraries.",
   "author": {
     "name": "ShortsIntel",
@@ -24,17 +24,20 @@
       "interface": {
         "displayName": "ShortsIntel",
         "shortDescription": "Short-form video and ad intel",
-        "longDescription": "ShortsIntel analyses public short-form video and ad data on TikTok, Instagram Reels, YouTube Shorts and Facebook, and gives you its own findings: ranked videos, outlier creators, verbatim hooks, winning formats, audience gaps and recommended angles.\n\nUse it to:\n- Research what is working in a niche and get a readable summary of themes, hooks and angles.\n- Look up a video, creator, hashtag or sound, and score a video against its creator's usual reach.\n- Track creators, hashtags, sounds and Meta advertisers daily, group them into Collections, and read what changed.\n- Search the Meta Ad Library and the TikTok ad library, with a winner score on each Meta ad.\n\nBuilt for creative strategists, marketers, agencies and creators planning short-form content and ads.\n\nYou sign in to your ShortsIntel account through OAuth. Lookups of your own Trackers, Collections, past Research, balance and usage are free. Research, searches, lookups and tracking cycles spend Credits from your ShortsIntel balance, and the assistant states the cost in Credits before running them. ShortsIntel covers public posts and public ad library entries only: it cannot see private accounts, direct messages or data behind a login.",
+        "longDescription": "ShortsIntel analyses public short-form video and ad data on TikTok, Instagram Reels, YouTube Shorts and Facebook, and gives you its own findings: ranked videos, outlier creators, verbatim hooks, winning formats, audience gaps and recommended angles.\n\nUse it to:\n- Research what is working in a niche and get a readable summary of themes, hooks and angles.\n- Look up a video, creator, hashtag or sound, and score a video against its creator's usual reach.\n- Track creators, hashtags, sounds and Meta advertisers daily, group them into Collections, and read what changed.\n- Search the Meta Ad Library and the TikTok ad library, with a winner score on each Meta ad.\n\nBuilt for creative strategists, marketers, agencies and creators planning short-form content and ads.\n\nYou sign in to your ShortsIntel account through OAuth. ShortsIntel covers public posts and public ad library entries only: it cannot see private accounts, direct messages or data behind a login.",
         "developerName": "Jackson Gathondu",
-        "category": "Productivity",
-        "capabilities": ["Read", "Write"],
+        "category": "Data & Analytics",
+        "capabilities": [
+          "Read",
+          "Write"
+        ],
         "websiteURL": "https://www.shortsintel.com",
         "supportURL": "https://www.shortsintel.com/support",
         "privacyPolicyURL": "https://www.shortsintel.com/privacy",
         "termsOfServiceURL": "https://www.shortsintel.com/terms",
         "defaultPrompt": [
           "What hooks are working for AI video tools on TikTok this week?",
-          "Track @nike on TikTok and tell me what changed since yesterday.",
+          "Track Nike's TikTok account and tell me what changed since yesterday.",
           "Show me Meta ads running for protein powder in the US."
         ],
         "brandColor": "#B53A1C",

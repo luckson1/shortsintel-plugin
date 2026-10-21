@@ -1,0 +1,8 @@
+{
+  "mcpServers": {
+    "shortsintel": {
+      "type": "http",
+      "url": "https://www.shortsintel.com/api/mcp"
+    }
+  }
+}

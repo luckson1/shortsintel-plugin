@@ -17,7 +17,7 @@ description: Track TikTok, Instagram or Facebook creators, TikTok or Instagram h
 1. Call `list_trackers` (free) first. If the target is already tracked, use that Tracker instead of creating one.
 2. Call `track` with `estimate: true` and tell the user the price per daily cycle in Credits. Creating a Tracker runs and charges the first cycle at once, and every later cycle is charged too, so confirm before creating it.
 3. Call `track` with the kind, platform and target (handle, tag, sound id or Facebook Page id). Pass `collection` to also put it in a Collection by name.
-4. Mention that analysis of new videos or ads (`set_tracker_intelligence`) costs extra Credits per item, and only switch it on if the user asks.
+4. Mention that analysis of new videos (`set_tracker_intelligence`) costs extra Credits per video, and only switch it on if the user asks.
 
 ## Report what changed
 
@@ -26,16 +26,11 @@ description: Track TikTok, Instagram or Facebook creators, TikTok or Instagram h
 
 ## Manage
 
-Refer to a Tracker by `tracker_id`, or by platform and target. Refer to a Collection by id or name.
-
-- Inspect one Tracker: `get_tracker` (free).
-- Pause or resume: `set_tracker_paused` (free). Paused Trackers run no cycles and are not charged.
-- Analysis of new videos or ads: `set_tracker_intelligence` (switching is free; each analysed item costs extra Credits from the next cycle). Say so before switching it on.
-- Collections: `list_collections` and `create_collection`, `rename_collection` (free).
-- Members: `add_collection_member` and `remove_collection_member`. Adding a target that is not tracked yet starts a paid Tracker whose first cycle runs at once, so quote the price first. Removing never touches the Tracker.
-- Every member at once (pause, resume, analysis on/off): `update_collection_members`. Free. A Tracker in several Collections changes for all of them.
-- Refresh every member now: `refresh_collection`. Charged one cycle per member; quote it with `estimate: true` first.
-- Delete: `delete_tracker` or `delete_collection`. Deletion is final, so confirm with the user first. Deleting a Collection leaves its Trackers running unless the user asks to delete them too; tell the user which Trackers are still being charged.
+- Pause or resume: `set_tracker_state` (free). Paused Trackers are not charged.
+- Inspect one: `get_tracker` (free).
+- Collections: `list_collections`, `create_collection`, `rename_collection`, `add_to_collection`, `remove_from_collection`. Adding a target that is not tracked yet starts a paid Tracker, so say the price first.
+- Bulk pause, resume, refresh or analysis for every member: `act_on_collection`. A refresh is charged per member; quote it with `estimate` first.
+- Delete: `delete_tracker` or `delete_collection`. Deletion is final, so confirm with the user first.
 
 ## Output
 

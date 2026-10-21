@@ -1,8 +1,8 @@
 {
   "name": "shortsintel",
   "displayName": "ShortsIntel",
-  "version": "1.0.0",
-  "description": "Short-form video and ad intelligence for TikTok, Instagram Reels, YouTube Shorts and Facebook: research what works in a niche, track creators, hashtags and sounds, and search the Meta and TikTok ad libraries.",
+  "version": "1.0.2",
+  "description": "Short-form video and ad intelligence for TikTok, Instagram Reels, YouTube Shorts and Facebook: research what works in a niche, track creators, hashtags, sounds and advertisers, and search the Meta and TikTok ad libraries.",
   "author": {
     "name": "ShortsIntel",
     "email": "support@shortsintel.com",
@@ -18,11 +18,10 @@
     "short-form-video",
     "ads",
     "creative-strategy",
-    "social-listening",
-    "mcp"
+    "social-listening"
   ],
   "documentationUrl": "https://www.shortsintel.com/docs/mcp",
-  "supportUrl": "https://www.shortsintel.com/contact",
+  "supportUrl": "https://www.shortsintel.com/support",
   "privacyPolicyUrl": "https://www.shortsintel.com/privacy",
   "termsOfServiceUrl": "https://www.shortsintel.com/terms"
 }

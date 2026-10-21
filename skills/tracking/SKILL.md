@@ -33,7 +33,8 @@ Refer to a Tracker by `tracker_id`, or by platform and target. Refer to a Collec
 - Analysis of new videos or ads: `set_tracker_intelligence` (switching is free; each analysed item costs extra Credits from the next cycle). Say so before switching it on.
 - Collections: `list_collections` and `create_collection`, `rename_collection` (free).
 - Members: `add_collection_member` and `remove_collection_member`. Adding a target that is not tracked yet starts a paid Tracker whose first cycle runs at once, so quote the price first. Removing never touches the Tracker.
-- Every member at once (pause, resume, analysis, refresh): `update_collection_members`. A refresh is charged one cycle per member; quote it with `estimate: true` first. A Tracker in several Collections changes for all of them.
+- Every member at once (pause, resume, analysis on/off): `update_collection_members`. Free. A Tracker in several Collections changes for all of them.
+- Refresh every member now: `refresh_collection`. Charged one cycle per member; quote it with `estimate: true` first.
 - Delete: `delete_tracker` or `delete_collection`. Deletion is final, so confirm with the user first. Deleting a Collection leaves its Trackers running unless the user asks to delete them too; tell the user which Trackers are still being charged.
 
 ## Output

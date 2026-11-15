@@ -72,6 +72,18 @@ for (const [name, mutate, expect] of cases) {
   ok(r.status === 1 && r.stderr.includes(expect) && !fs.existsSync(path.join(dir, "dist")), `rejects ${name}${r.status === 1 && r.stderr.includes(expect) ? "" : `\n    exit ${r.status}, stderr: ${r.stderr.trim()}`}`);
 }
 
-console.log(failed ? `\n${failed} failed` : `\nall ${cases.length + 1} passed`);
+// luckson1/ads#1065 cut these MCP tools with no alias; a skill naming one makes the model call an unknown tool.
+const REMOVED_TOOLS = ["set_tracker_state", "set_tracker_intelligence", "create_collection", "rename_collection", "delete_collection", "remove_from_collection"];
+const skillsDir = path.join(repo, "skills");
+for (const skill of fs.readdirSync(skillsDir)) {
+  const text = fs.readFileSync(path.join(skillsDir, skill, "SKILL.md"), "utf8");
+  const named = REMOVED_TOOLS.filter((t) => new RegExp(`\\b${t}\\b`).test(text));
+  ok(named.length === 0, `skills/${skill} names no removed tool${named.length ? `: ${named.join(", ")}` : ""}`);
+}
+
+const versions = [".claude-plugin/plugin.json", "plugin.json"].map((f) => JSON.parse(fs.readFileSync(path.join(repo, f), "utf8")).version);
+ok(new Set(versions).size === 1, `manifests carry one version (${versions.join(", ")})`);
+
+console.log(failed ? `\n${failed} failed` : `\nall checks passed`);
 for (const d of made) fs.rmSync(d, { recursive: true, force: true });
 process.exitCode = failed ? 1 : 0;

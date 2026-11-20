@@ -1,6 +1,6 @@
 # ShortsIntel
 
-ShortsIntel is our own analysis of public short-form video, creator and ad data on TikTok, Instagram Reels, YouTube Shorts and Facebook. This repository connects an AI assistant (Claude, ChatGPT or Codex) to the ShortsIntel server and adds three skills, so you can ask in plain language and the assistant picks the right tools.
+ShortsIntel is our own analysis of public short-form video, creator and ad data on TikTok, Instagram Reels, YouTube Shorts and Facebook. This repository connects an AI assistant (Claude, ChatGPT or Codex) to the ShortsIntel server and adds four skills, so you can ask in plain language and the assistant picks the right tools.
 
 ## What's inside
 
@@ -9,6 +9,7 @@ ShortsIntel is our own analysis of public short-form video, creator and ad data 
   - `niche-research`: turns "what's working in my niche" into a Research and a short summary of themes, hooks and angles.
   - `tracking`: tracks creators, hashtags, sounds and Meta advertisers, groups them into Collections, and reports what changed.
   - `ad-research`: searches the Meta Ad Library and the TikTok ad library and summarises the ads.
+  - `visual-report`: lays out a ShortsIntel result as an HTML page in the order the Playground shows it, with every tile linked to its source post.
 - **Icons** in `assets/`.
 
 There are no hooks, local servers or binaries. The package is Markdown, JSON and PNG. `scripts/` holds the release build script, which is not part of either package.
